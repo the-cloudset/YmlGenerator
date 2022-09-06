@@ -27,6 +27,11 @@ class OfferCondition
     private $reasonText;
 
     /**
+     * @var string
+     */
+    private $quality;
+
+    /**
      * @return string
      */
     public function getReasonText()
@@ -66,6 +71,24 @@ class OfferCondition
     public function setType($type)
     {
         $this->type = $type;
+
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getQuality()
+    {
+        return isset($this->quality->value) ? $this->quality->value : '';
+    }
+
+    /**
+     * @return OfferCondition|string
+     */
+    public function setQuality($quality)
+    {
+        $this->quality = $quality;
 
         return $this;
     }

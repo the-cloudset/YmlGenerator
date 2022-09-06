@@ -342,6 +342,7 @@ class Generator
             $this->writer->startElement('condition');
             $this->writer->writeAttribute('type', $params->getType());
             $this->writer->writeElement('reason', $params->getReasonText());
+            $this->writer->writeElement('quality', $params->getQuality());
             $this->writer->endElement();
         }
     }
